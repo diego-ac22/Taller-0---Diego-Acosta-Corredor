@@ -91,7 +91,7 @@ public class ConsolaOlimpicos
 	{
 		System.out.println("\nOpciones de la aplicación\n");
 		System.out.println("1. Cargar un archivo de atletas");
-		System.out.println("2. Consultar los atletas de un año dadoooooooo");
+		System.out.println("2. Consultar los atletas de un año dado");
 		System.out.println("3. Consultar las medallas de un atleta en un periodo");
 		System.out.println("4. Consultar los atletas de un país dado");
 		System.out.println("5. Consultar el país con más medallistas");
@@ -127,7 +127,7 @@ public class ConsolaOlimpicos
 
 		String atleta = input("Por favor ingrese el nombre del atleta");
 
-			Genero elGenero = genero.equals("m") ? Genero.MASCULINO : Genero.FEMENINO;
+			AtletaNombre elAtleta = atleta.equals("m") ? Genero.MASCULINO : Genero.FEMENINO;
 			Map<String, List<Map<String, Object>>> medallistas = calculadora.medallistasPorNacionGenero(pais, elGenero);
 
 			if (medallistas != null)
@@ -141,7 +141,6 @@ public class ConsolaOlimpicos
 					for (Map<String, Object> medalla : medallas)
 					{
 						System.out.println("Evento: " + medalla.get("evento") + " (" + medalla.get("anio") + ")");
-						System.out.println("    Medalla: " + medalla.get("medalla"));
 					}
 				}
 			}
