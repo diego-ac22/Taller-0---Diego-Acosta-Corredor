@@ -125,7 +125,7 @@ public class ConsolaOlimpicos
 	{
 		System.out.println("\n" + "Pais de origen de un atleta" + "\n");
 
-		String atleta = input("Por favor ingrese el nombre del atleta");
+		String atleta = input("Por favor ingrese el nombre del atleta ");
 
 			AtletaNombre elAtleta = atleta.equals("m") ? Genero.MASCULINO : Genero.FEMENINO;
 			Map<String, List<Map<String, Object>>> medallistas = calculadora.medallistasPorNacionGenero(pais, elGenero);
